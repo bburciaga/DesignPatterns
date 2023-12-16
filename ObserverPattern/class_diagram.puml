@@ -15,7 +15,7 @@ interface Display {
 }
 
 class WeatherStation {
-
+  observers: ArrayList<Observer>
 }
 
 WeatherStation -- Subject : has
