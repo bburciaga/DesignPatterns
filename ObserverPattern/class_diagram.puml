@@ -1,5 +1,3 @@
-# Observer Pattern
-
 @startuml
 
 interface Subject {
@@ -15,5 +13,11 @@ interface Observer {
 interface Display {
   + display()
 }
+
+class WeatherStation {
+
+}
+
+WeatherStation -- Subject : has
 
 @enduml
