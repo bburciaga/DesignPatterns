@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>110</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/Subject/
+--
++ registerObserver()
++ removeObserver()
++ notifyObservers()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>90</y>
+      <w>250</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>/Observer/
+--
++ update(
+	temperature: double,
+	humidity: double, 
+	pressure: double
+)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>90</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>/Display/
+--
++ display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>310</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>WeatherStation
+--
+- observers: List&lt;Observer&gt;
+- temperature: double
+- humidity: double
+- pressure: double
+--
++ WeatherStation()
++ setMeasurements(
+	temperature: double,
+	humidity: double,
+	pressure: double
+)
++ registerObserver()
++ removeObserver()
++ notifyObserver()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>430</y>
+      <w>180</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>CurrentConditions
+--
+- temperature: double
+- humidity: double
+- pressure: double
+--
++ CurrentConditions(
+weatherStation: Subject
+)
++ update(
+	temperature: double,
+	humidity: double, 
+	pressure: double
+)
++ display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>180</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>370</y>
+      <w>230</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>Statistics
+--
+- temperatureList: List&lt;double&gt;
+- aveTemperature:double
+- minTemperature: double
+- maxTemperature: double
+- humidityList: List&lt;double&gt;
+- aveHumidity: double
+- minHumidity: double
+- maxHumidity: double
+- pressureList: List&lt;double&gt;
+- avePressure: double
+- minPressure: double
+- maxPressure: double
+--
++ Statistics(
+weatherStation: Subject
+)
++ update(
+	temperature: double,
+	humidity: double, 
+	pressure: double
+)
++ display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>310</y>
+      <w>180</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>HeatIndex
+--
+- temperature: double
+- humidity: double
+- index: double
+--
++ HeatIndex(
+weatherStation: Subject
+)
++ calculateIndex()
++ update(
+	temperature: double,
+	humidity: double, 
+	pressure: double
+)
++ display()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>190</y>
+      <w>190</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>130</y>
+      <w>460</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>440.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>190</y>
+      <w>80</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>190</y>
+      <w>390</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>130</y>
+      <w>30</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>130</y>
+      <w>250</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>390</y>
+      <w>300</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>320</y>
+      <w>560</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;540.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>460</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+</diagram>
