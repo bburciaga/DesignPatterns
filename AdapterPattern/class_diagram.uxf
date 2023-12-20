@@ -65,6 +65,8 @@ fly()</panel_attributes>
     </coordinates>
     <panel_attributes>TurkeyAdapter
 --
+- turkey: Turkey
+--
 TurkeyAdapter(
 Turkey turkey)
 quack()
