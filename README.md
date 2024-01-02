@@ -35,3 +35,5 @@ Each design pattern has a uml diagram in their root directory
 ## Future work
 
 Apply MVC and the other patterns into a game or game engine. Iterator acted as a gun that  could be useful. I could also see implementing it through something like a factory pattern. I would also later add descriptions to how the code works to explain the understanding of each pattern. Looking into patterns that work with ReactJS.
+
+cool
